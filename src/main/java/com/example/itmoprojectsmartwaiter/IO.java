@@ -81,7 +81,7 @@ public class IO {
     public static void writeFileMeal(ObservableList<Meal> mealList) {
         try {
             FileWriter fw = new FileWriter("testHistory.txt");
-            fw.write(historyController.defaultCalo+"\n");
+            fw.write(HistoryController.defaultCalo+"\n");
             for(Meal a : mealList){
                 fw.write(a+"\n");
             }
@@ -101,7 +101,7 @@ public class IO {
         int i=0;
         try{
             Scanner f = new Scanner(new File("testHistory.txt"));
-            historyController.defaultCalo=Double.parseDouble(f.nextLine());
+            HistoryController.defaultCalo=Double.parseDouble(f.nextLine());
             while (f.hasNextLine()) {
                 i=0;
                 listOrder=new ArrayList<>();

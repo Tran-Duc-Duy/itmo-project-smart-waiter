@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="322.0" style="-fx-background-radius: 20; -fx-background-color: #323D4C;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.DishItemController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="322.0" style="-fx-background-radius: 20; -fx-background-color: #323D4C;" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.DishItemController">
     <children>
         <HBox prefHeight="150.0" prefWidth="300.0" spacing="20.0">
             <children>

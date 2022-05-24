@@ -23,7 +23,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.historyController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.HistoryController">
     <top>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30 30 0 0; -fx-background-color: #313040;" BorderPane.alignment="CENTER">
             <children>
@@ -143,7 +143,7 @@
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="818.0" prefWidth="1480.0" spacing="5.0" style="-fx-background-color: #EFE9DB; -fx-background-radius: 30;" BorderPane.alignment="TOP_CENTER">
             <children>
-                <TableView fx:id="table" prefHeight="350.0" prefWidth="1440.0" stylesheets="@style/style.css">
+                <TableView fx:id="table" prefHeight="350.0" prefWidth="1440.0" stylesheets="@styles/style.css">
                     <columns>
                         <TableColumn fx:id="nameColumn" prefWidth="630.0" text="Meal" />
                         <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="300.0" text="Day" />
@@ -179,14 +179,14 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <ToggleButton fx:id="button_1" mnemonicParsing="false" onAction="#toggleButton" prefWidth="90.0" selected="true" style="-fx-background-radius: 30; -fx-background-color: BDCEC6;" stylesheets="@style/style.css" text="Male">
+                                        <ToggleButton fx:id="button_1" mnemonicParsing="false" onAction="#toggleButton" prefWidth="90.0" selected="true" style="-fx-background-radius: 30; -fx-background-color: BDCEC6;" stylesheets="@styles/style.css" text="Male">
                                             <font>
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                             <toggleGroup>
                                                 <ToggleGroup fx:id="gender" />
                                             </toggleGroup></ToggleButton>
-                                        <ToggleButton fx:id="button_2" mnemonicParsing="false" onAction="#toggleButton" prefWidth="90.0" style="-fx-background-radius: 30; -fx-background-color: EFE9DB;" stylesheets="@style/style.css" text="Female" toggleGroup="$gender">
+                                        <ToggleButton fx:id="button_2" mnemonicParsing="false" onAction="#toggleButton" prefWidth="90.0" style="-fx-background-radius: 30; -fx-background-color: EFE9DB;" stylesheets="@styles/style.css" text="Female" toggleGroup="$gender">
                                             <font>
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font></ToggleButton>
@@ -226,12 +226,12 @@
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
                                 </Label>
-                                <ChoiceBox fx:id="typeChoice" prefHeight="30.0" prefWidth="400.0" styleClass="type-choice" stylesheets="@style/style.css">
+                                <ChoiceBox fx:id="typeChoice" prefHeight="30.0" prefWidth="400.0" styleClass="type-choice" stylesheets="@styles/style.css">
                                     <cursor>
                                         <Cursor fx:constant="NONE" />
                                     </cursor>
                                 </ChoiceBox>
-                                <Button mnemonicParsing="false" onAction="#calculateBMR" prefHeight="30.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@style/style.css" text="Calculate">
+                                <Button mnemonicParsing="false" onAction="#calculateBMR" prefHeight="30.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@styles/style.css" text="Calculate">
                                     <HBox.margin>
                                         <Insets left="30.0" />
                                     </HBox.margin>

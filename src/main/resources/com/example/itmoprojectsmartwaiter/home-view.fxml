@@ -190,7 +190,7 @@
                                             <font>
                                                 <Font name="Cambria Bold" size="36.0" />
                                             </font></Label>
-                                        <ChoiceBox fx:id="typeChoice" prefHeight="42.0" prefWidth="200.0" styleClass="type-choice" stylesheets="@style/style.css">
+                                        <ChoiceBox fx:id="typeChoice" prefHeight="42.0" prefWidth="200.0" styleClass="type-choice" stylesheets="@styles/style.css">
                                             <HBox.margin>
                                                 <Insets bottom="5.0" />
                                             </HBox.margin></ChoiceBox>
@@ -202,7 +202,7 @@
                                 </HBox>
                                 <HBox prefHeight="256.0" prefWidth="689.0">
                                     <children>
-                                        <TableView fx:id="tableResult" prefHeight="200.0" prefWidth="650.0" stylesheets="@style/style.css">
+                                        <TableView fx:id="tableResult" prefHeight="200.0" prefWidth="650.0" stylesheets="@styles/style.css">
                                             <columns>
                                                 <TableColumn fx:id="resultColumn" prefWidth="75.0" text="results" />
                                                 <TableColumn fx:id="sumColumn" prefWidth="75.0" text="sum" />
@@ -261,7 +261,7 @@
                                         </VBox>
                                     </children>
                                 </HBox>
-                                <TableView fx:id="tableOrder" prefHeight="256.0" prefWidth="700.0" stylesheets="@style/style.css">
+                                <TableView fx:id="tableOrder" prefHeight="256.0" prefWidth="700.0" stylesheets="@styles/style.css">
                                     <columns>
                                         <TableColumn fx:id="orderColumn" prefWidth="543.0" text="order" />
                                         <TableColumn fx:id="actionOrderColumn" prefWidth="155.0" text="action" />
@@ -303,7 +303,7 @@
                                             </font>
                                         </Label>
                                         <Pane prefHeight="34.0" prefWidth="5.0" HBox.hgrow="ALWAYS" />
-                                        <Button mnemonicParsing="false" onAction="#confirmB" styleClass="btn-all" stylesheets="@style/style.css" text="Confirm">
+                                        <Button mnemonicParsing="false" onAction="#confirmB" styleClass="btn-all" stylesheets="@styles/style.css" text="Confirm">
                                             <font>
                                                 <Font name="Cambria Bold" size="14.0" />
                                             </font>

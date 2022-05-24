@@ -77,7 +77,7 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dishList = IO.readFile();
         mealList = IO.readFileMeal();
-        caloDefaultLabel.setText(String.valueOf(historyController.defaultCalo));
+        caloDefaultLabel.setText(String.valueOf(HistoryController.defaultCalo));
         caloNeedLabel.setText(String.valueOf(caloToday()));
         //declare líst recommend
         dishListRecommend = FXCollections.observableArrayList();
@@ -154,7 +154,7 @@ public class HomeController implements Initializable {
                 rs+=me.getCalo();
             }
         }
-        return historyController.defaultCalo-rs;
+        return HistoryController.defaultCalo-rs;
     }
 
     //method to calculate total price, calories, time and then display

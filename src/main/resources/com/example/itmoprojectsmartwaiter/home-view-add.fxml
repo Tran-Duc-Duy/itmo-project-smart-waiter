@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.editController">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.EditController">
     <top>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30 30 0 0; -fx-background-color: #313040;" BorderPane.alignment="CENTER">
             <children>
@@ -160,7 +160,7 @@
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="818.0" prefWidth="1480.0" spacing="5.0" style="-fx-background-color: #EFE9DB; -fx-background-radius: 30;" BorderPane.alignment="TOP_CENTER">
             <children>
-                <TableView fx:id="table" prefHeight="420.0" prefWidth="1440.0" stylesheets="@style/style.css">
+                <TableView fx:id="table" prefHeight="420.0" prefWidth="1440.0" stylesheets="@styles/style.css">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
                         <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" />
@@ -190,7 +190,7 @@
                                 </ImageView>
                                 <HBox alignment="TOP_CENTER">
                                     <children>
-                                        <Button mnemonicParsing="false" onAction="#chooseFile" prefHeight="34.0" prefWidth="240.0" styleClass="btn-all" stylesheets="@style/style.css" text="Choose Image ">
+                                        <Button mnemonicParsing="false" onAction="#chooseFile" prefHeight="34.0" prefWidth="240.0" styleClass="btn-all" stylesheets="@styles/style.css" text="Choose Image ">
                                             <font>
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font></Button>
@@ -265,7 +265,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <ChoiceBox fx:id="typeChoice" prefHeight="25.0" prefWidth="312.0" styleClass="type-choice" stylesheets="@style/style.css">
+                                        <ChoiceBox fx:id="typeChoice" prefHeight="25.0" prefWidth="312.0" styleClass="type-choice" stylesheets="@styles/style.css">
                                             <cursor>
                                                 <Cursor fx:constant="NONE" />
                                             </cursor>
@@ -293,7 +293,7 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="20.0" prefWidth="1440.0" spacing="50.0">
                     <children>
-                        <Button fx:id="btAdd" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@style/style.css" text="Add">
+                        <Button fx:id="btAdd" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@styles/style.css" text="Add">
                             <font>
                                 <Font name="Cambria Bold" size="24.0" />
                             </font></Button>
