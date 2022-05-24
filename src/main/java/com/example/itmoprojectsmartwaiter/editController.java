@@ -69,7 +69,7 @@ public class editController implements Initializable {
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("nameDish"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         caloColumn.setCellValueFactory(new PropertyValueFactory<>("totalCalo"));
-        moneyColumn.setCellValueFactory(new PropertyValueFactory<>("totalTien"));
+        moneyColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("time"));
         imgColumn.setCellValueFactory(new PropertyValueFactory<>("imgView"));
