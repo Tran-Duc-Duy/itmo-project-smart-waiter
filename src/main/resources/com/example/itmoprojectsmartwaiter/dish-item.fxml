@@ -10,25 +10,25 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="322.0" style="-fx-background-radius: 20; -fx-background-color: #323D4C;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="322.0" style="-fx-background-radius: 20; -fx-background-color: #323D4C;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.DishItemController">
     <children>
         <HBox prefHeight="150.0" prefWidth="300.0" spacing="20.0">
             <children>
-                <ImageView fitHeight="110.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="img" fitHeight="110.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@img/Chef.png" />
                     </image>
                 </ImageView>
                 <VBox prefHeight="110.0" prefWidth="160.0">
                     <children>
-                        <Label alignment="TOP_LEFT" prefHeight="47.0" prefWidth="157.0" text="Ten" textAlignment="CENTER" textFill="#f2f2f2">
+                        <Label fx:id="nameLabel" alignment="TOP_LEFT" prefHeight="47.0" prefWidth="157.0" text="Ten" textAlignment="CENTER" textFill="#f2f2f2">
                             <font>
                                 <Font name="Cambria Bold" size="20.0" />
                             </font>
                         </Label>
                         <HBox>
                             <children>
-                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Gia" textAlignment="CENTER" textFill="#f2f2f2">
+                                <Label fx:id="giaLabel" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Gia" textAlignment="CENTER" textFill="#f2f2f2">
                                     <font>
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
@@ -46,7 +46,7 @@
                         </HBox>
                         <HBox>
                             <children>
-                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Calo " textAlignment="CENTER" textFill="#f2f2f2">
+                                <Label fx:id="caloLabel" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Calo " textAlignment="CENTER" textFill="#f2f2f2">
                                     <font>
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
@@ -61,7 +61,7 @@
                         </HBox>
                         <HBox>
                             <children>
-                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Time " textAlignment="CENTER" textFill="#f2f2f2">
+                                <Label fx:id="timeLabel" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Time " textAlignment="CENTER" textFill="#f2f2f2">
                                     <font>
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
@@ -76,7 +76,7 @@
                         </HBox>
                         <HBox>
                             <children>
-                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Type" textAlignment="CENTER" textFill="#f2f2f2">
+                                <Label fx:id="typeLabel" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Type" textAlignment="CENTER" textFill="#f2f2f2">
                                     <font>
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
@@ -96,7 +96,7 @@
                 <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
             </padding>
         </HBox>
-        <Label alignment="TOP_LEFT" prefHeight="57.0" prefWidth="310.0" textFill="#f2f2f2" textOverrun="WORD_ELLIPSIS">
+        <Label fx:id="descriptionLabel" alignment="TOP_LEFT" prefHeight="57.0" prefWidth="310.0" textFill="#f2f2f2" textOverrun="WORD_ELLIPSIS">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
