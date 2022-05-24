@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.editController">
     <top>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30 30 0 0; -fx-background-color: #313040;" BorderPane.alignment="CENTER">
             <children>
@@ -67,7 +67,7 @@
                         </LinearGradient>
                     </textFill>
                 </Label>
-                <TextField prefHeight="50.0" prefWidth="390.0" promptText="Search" style="-fx-background-radius: 10;">
+                <TextField fx:id="keywordTextField" prefHeight="50.0" prefWidth="390.0" promptText="Search" style="-fx-background-radius: 10;">
                     <font>
                         <Font name="Cambria Bold" size="18.0" />
                     </font>
@@ -92,7 +92,7 @@
                         <Insets right="5.0" />
                     </HBox.margin>
                 </Label>
-                <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="73.0" style="-fx-background-radius: 50; -fx-background-color: #EAB753;">
+                <Button mnemonicParsing="false" onAction="#close" prefHeight="71.0" prefWidth="73.0" style="-fx-background-radius: 50; -fx-background-color: #EAB753;">
                     <graphic>
                         <ImageView fitHeight="63.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -116,7 +116,7 @@
                 <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: #313040;">
+                        <Button mnemonicParsing="false" onAction="#changeSceneHome" style="-fx-background-color: #313040;">
                             <graphic>
                                 <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -142,7 +142,7 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: 313040;" textFill="#ededf2">
+                        <Button mnemonicParsing="false" onAction="#changeSceneDishHistory" style="-fx-background-color: 313040;" textFill="#ededf2">
                             <graphic>
                                 <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -160,24 +160,24 @@
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="818.0" prefWidth="1480.0" spacing="5.0" style="-fx-background-color: #EFE9DB; -fx-background-radius: 30;" BorderPane.alignment="TOP_CENTER">
             <children>
-                <TableView prefHeight="420.0" prefWidth="1440.0" stylesheets="@style/style.css">
+                <TableView fx:id="table" prefHeight="420.0" prefWidth="1440.0" stylesheets="@style/style.css">
                     <columns>
-                        <TableColumn prefWidth="50.0" text="ID" />
-                        <TableColumn prefWidth="180.0" text="Name" />
-                        <TableColumn minWidth="0.0" prefWidth="150.0" text="Type" />
-                        <TableColumn prefWidth="100.0" text="Price" />
-                        <TableColumn prefWidth="100.0" text="Calo" />
-                        <TableColumn prefWidth="100.0" text="Time" />
-                        <TableColumn prefWidth="200.0" text="Description" />
-                        <TableColumn prefWidth="350.0" text="Image" />
-                        <TableColumn prefWidth="90.0" text="Action" />
+                        <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" />
+                        <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="150.0" text="Type" />
+                        <TableColumn fx:id="moneyColumn" prefWidth="100.0" text="Price" />
+                        <TableColumn fx:id="caloColumn" prefWidth="100.0" text="Calo" />
+                        <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Time" />
+                        <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Description" />
+                        <TableColumn fx:id="imgColumn" prefWidth="350.0" text="Image" />
+                        <TableColumn fx:id="actionColumn" prefWidth="90.0" text="Action" />
                     </columns>
                 </TableView>
                 <HBox alignment="CENTER" prefHeight="266.0" prefWidth="1340.0">
                     <children>
                         <VBox alignment="CENTER" fillWidth="false" prefHeight="266.0" prefWidth="280.0">
                             <children>
-                                <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                                <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
                                     <VBox.margin>
                                         <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
                                     </VBox.margin>
@@ -190,7 +190,7 @@
                                 </ImageView>
                                 <HBox alignment="TOP_CENTER">
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="240.0" styleClass="btn-all" stylesheets="@style/style.css" text="Choose Image ">
+                                        <Button mnemonicParsing="false" onAction="#chooseFile" prefHeight="34.0" prefWidth="240.0" styleClass="btn-all" stylesheets="@style/style.css" text="Choose Image ">
                                             <font>
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font></Button>
@@ -215,7 +215,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <TextField prefHeight="25.0" prefWidth="400.0" promptText="Dish's name" style="-fx-background-radius: 5;">
+                                        <TextField fx:id="nameText" prefHeight="25.0" prefWidth="400.0" promptText="Dish's name" style="-fx-background-radius: 5;">
                                             <font>
                                                 <Font name="Cambria" size="14.0" />
                                             </font>
@@ -226,7 +226,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <TextField prefHeight="25.0" prefWidth="400.0" promptText="Dish's prince" style="-fx-background-radius: 5;">
+                                        <TextField fx:id="moneyText" prefHeight="25.0" prefWidth="400.0" promptText="Dish's prince" style="-fx-background-radius: 5;">
                                             <font>
                                                 <Font name="Cambria" size="14.0" />
                                             </font>
@@ -240,7 +240,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <TextField prefHeight="25.0" prefWidth="400.0" promptText="Dish's Calo" style="-fx-background-radius: 5;">
+                                        <TextField fx:id="caloText" prefHeight="25.0" prefWidth="400.0" promptText="Dish's Calo" style="-fx-background-radius: 5;">
                                             <font>
                                                 <Font name="Cambria" size="14.0" />
                                             </font>
@@ -251,7 +251,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <TextField prefHeight="25.0" prefWidth="400.0" promptText="Dish's time" style="-fx-background-radius: 5;">
+                                        <TextField fx:id="timeText" prefHeight="25.0" prefWidth="400.0" promptText="Dish's time" style="-fx-background-radius: 5;">
                                             <font>
                                                 <Font name="Cambria" size="14.0" />
                                             </font>
@@ -265,7 +265,7 @@
                                                 <Font name="Cambria Bold" size="18.0" />
                                             </font>
                                         </Label>
-                                        <ChoiceBox prefHeight="25.0" prefWidth="312.0" styleClass="type-choice" stylesheets="@style/style.css">
+                                        <ChoiceBox fx:id="typeChoice" prefHeight="25.0" prefWidth="312.0" styleClass="type-choice" stylesheets="@style/style.css">
                                             <cursor>
                                                 <Cursor fx:constant="NONE" />
                                             </cursor>
@@ -277,7 +277,7 @@
                                         <Font name="Cambria Bold" size="18.0" />
                                     </font>
                                 </Label>
-                                <TextArea prefHeight="80.0" prefWidth="688.0" promptText="say some thing about your dish">
+                                <TextArea fx:id="descriptionAText" prefHeight="80.0" prefWidth="688.0" promptText="say some thing about your dish">
                                     <font>
                                         <Font name="Cambria" size="14.0" />
                                     </font></TextArea>
@@ -293,13 +293,13 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="20.0" prefWidth="1440.0" spacing="50.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@style/style.css" text="Add">
+                        <Button fx:id="btAdd" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="200.0" styleClass="btn-all" stylesheets="@style/style.css" text="Add">
                             <font>
                                 <Font name="Cambria Bold" size="24.0" />
                             </font></Button>
                     </children>
                 </HBox>
-                <Label alignment="CENTER" prefWidth="800.0" textFill="RED">
+                <Label fx:id="invalidLabel" alignment="CENTER" prefWidth="800.0" textFill="RED">
                     <font>
                         <Font name="Cambria Bold" size="24.0" />
                     </font>
