@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #313040; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itmoprojectsmartwaiter.DishDetailController">
     <top>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 30 30 0 0; -fx-background-color: #313040;" BorderPane.alignment="CENTER">
             <children>
@@ -66,7 +66,7 @@
                         <Font name="Cambria Bold" size="48.0" />
                     </font>
                 </Label>
-                <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="73.0" style="-fx-background-radius: 50; -fx-background-color: #EAB753;">
+                <Button mnemonicParsing="false" onAction="#close" prefHeight="71.0" prefWidth="73.0" style="-fx-background-radius: 50; -fx-background-color: #EAB753;">
                     <graphic>
                         <ImageView fitHeight="63.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -90,7 +90,7 @@
                 <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: #313040;">
+                        <Button mnemonicParsing="false" onAction="#changeSceneHome" style="-fx-background-color: #313040;">
                             <graphic>
                                 <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -103,7 +103,7 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: #313040;">
+                        <Button mnemonicParsing="false" onAction="#changeSceneDishAdd" style="-fx-background-color: #313040;">
                             <graphic>
                                 <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -116,7 +116,7 @@
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: 313040;" textFill="#ededf2">
+                        <Button mnemonicParsing="false" onAction="#changeSceneDishHistory" style="-fx-background-color: 313040;" textFill="#ededf2">
                             <graphic>
                                 <ImageView fitHeight="62.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -136,14 +136,14 @@
             <children>
                 <VBox alignment="CENTER" prefHeight="367.0" prefWidth="1340.0">
                     <children>
-                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="1340.0" text="Name Dish" textAlignment="CENTER">
+                        <Label fx:id="nameLabel" alignment="CENTER" prefHeight="50.0" prefWidth="1340.0" text="Name Dish" textAlignment="CENTER">
                             <font>
                                 <Font name="Cambria Bold Italic" size="48.0" />
                             </font>
                         </Label>
                         <HBox alignment="TOP_RIGHT" prefHeight="282.0" prefWidth="1340.0">
                             <children>
-                                <ImageView fitHeight="251.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="img" fitHeight="251.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true">
                                     <HBox.margin>
                                         <Insets bottom="20.0" top="20.0" />
                                     </HBox.margin>
@@ -157,7 +157,7 @@
                                                         <Font name="Cambria Bold Italic" size="24.0" />
                                                     </font>
                                                 </Label>
-                                                <Label prefHeight="50.0" prefWidth="177.0" text="Price" textAlignment="CENTER">
+                                                <Label fx:id="giaLabel" prefHeight="50.0" prefWidth="177.0" text="Price" textAlignment="CENTER">
                                                     <font>
                                                         <Font name="Cambria Bold" size="18.0" />
                                                     </font>
@@ -171,7 +171,7 @@
                                                         <Font name="Cambria Bold Italic" size="24.0" />
                                                     </font>
                                                 </Label>
-                                                <Label prefHeight="50.0" prefWidth="175.0" text="Type" textAlignment="CENTER">
+                                                <Label fx:id="typeLabel" prefHeight="50.0" prefWidth="175.0" text="Type" textAlignment="CENTER">
                                                     <font>
                                                         <Font name="Cambria Bold" size="18.0" />
                                                     </font>
@@ -185,7 +185,7 @@
                                                         <Font name="Cambria Bold Italic" size="24.0" />
                                                     </font>
                                                 </Label>
-                                                <Label prefHeight="50.0" prefWidth="169.0" text="Calo" textAlignment="CENTER">
+                                                <Label fx:id="caloLabel" prefHeight="50.0" prefWidth="169.0" text="Calo" textAlignment="CENTER">
                                                     <font>
                                                         <Font name="Cambria Bold" size="18.0" />
                                                     </font>
@@ -199,7 +199,7 @@
                                                         <Font name="Cambria Bold Italic" size="24.0" />
                                                     </font>
                                                 </Label>
-                                                <Label prefHeight="50.0" prefWidth="166.0" text="Time" textAlignment="CENTER">
+                                                <Label fx:id="timeLabel" prefHeight="50.0" prefWidth="166.0" text="Time" textAlignment="CENTER">
                                                     <font>
                                                         <Font name="Cambria Bold" size="18.0" />
                                                     </font>
@@ -241,7 +241,7 @@
                 </HBox>
                 <HBox VBox.vgrow="ALWAYS">
                     <children>
-                        <Label alignment="TOP_LEFT" text="Description " wrapText="true" HBox.hgrow="ALWAYS">
+                        <Label fx:id="descriptionLabel" alignment="TOP_LEFT" text="Description " wrapText="true" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font name="Cambria Bold" size="14.0" />
                             </font>
@@ -261,4 +261,3 @@
         </VBox>
     </center>
 </BorderPane>
-
