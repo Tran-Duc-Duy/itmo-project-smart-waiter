@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class IO {
-    static String currentDirectory = System.getProperty("user.dir");
     public static void writeFile(ObservableList<Dish> dishList){
         try {
             FileWriter fw = new FileWriter("testIn.txt");
@@ -53,6 +52,8 @@ public class IO {
 
     public static String copyImg(String path, String name) throws IOException {
         //get the path of a file and save the file in the img directory
+        String currentDirectory = System.getProperty("user.dir");
+
         String newPath= currentDirectory.replaceAll("\\\\","\\\\")+"\\src\\main\\resources\\com\\example\\smartwaiter\\img\\"+name+".png";
 
         newPath=newPath.replaceAll("%20","-");
